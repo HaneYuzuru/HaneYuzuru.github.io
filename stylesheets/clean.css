@@ -90,12 +90,12 @@ header {
     /*position: relative;*/
     height: 310px;
     padding: 20px 0 70px 0;
-    background: #2d6360 50% 0 url(../images/天空.png) no-repeat;
+    background: #2d6360 50% 0 url(../images/天空小.jpg) no-repeat;
     border-top: solid 12px rgba(32, 122, 143, 0.8);
     box-shadow: inset 0 0 100px rgba(255, 255, 255, 0.3);
 
     background-attachment: fixed, fixed, scroll;
-    background-image: url(../images/noise.png), url(../images/gridlines.png),url(../images/天空.png);
+    background-image: url(../images/noise.png), url(../images/gridlines.png),url(../images/天空小.jpg);
     background-position: 0 0, 0 0, 0 50%;
     background-repeat: repeat, repeat, no-repeat;
     background-size: auto, auto, cover;
