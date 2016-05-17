@@ -66,6 +66,12 @@ p {
     text-align: justify;
 }
 
+a {
+    -webkit-transition: all 0.25s ease-out;
+    -moz-transition: all 0.25s ease-out;
+    transition: all 0.25s ease-out;
+}
+
 .page-wrapper {
     position: relative;
 }
@@ -158,6 +164,54 @@ header {
     list-style-type: none;
 }
 
+.body_container {
+    position: relative;
+}
+
+.main_content {
+    position: relative;
+    padding-top: 2em;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.main_content > h3{
+    color: darkgrey;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    text-align: center;
+}
+
+.post-link {
+    position: relative;
+    color: skyblue;
+    text-decoration: none;
+}
+
+.post-link::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: steelblue;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0s;
+}
+
+.post-link:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
+}
+
+.post-link:hover {
+    color: steelblue;
+}
 
 @media screen and (min-width: 1132px){
 
@@ -190,12 +244,12 @@ header {
 
     body {
         background: #ffffff;
-        background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 66%, #e5ede8 66%, #e5ede8 100%);
-        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(66%,#ffffff), color-stop(66%,#e5ede8), color-stop(100%,#e5ede8));
-        background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 66%,#e5ede8 66%,#e5ede8 100%);
-        background: -o-linear-gradient(left,  #ffffff 0%,#ffffff 66%,#e5ede8 66%,#e5ede8 100%);
-        background: -ms-linear-gradient(left,  #ffffff 0%,#ffffff 66%,#e5ede8 66%,#e5ede8 100%);
-        background: linear-gradient(to right,  #ffffff 0%,#ffffff 66%,#e5ede8 66%,#e5ede8 100%);
+        background: -moz-linear-gradient(left,  #ffffff 0%, #ffffff 66%, aliceblue 66%, aliceblue 100%);
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%,#ffffff), color-stop(66%,#ffffff), color-stop(66%,aliceblue), color-stop(100%,aliceblue));
+        background: -webkit-linear-gradient(left,  #ffffff 0%,#ffffff 66%,aliceblue 66%,aliceblue 100%);
+        background: -o-linear-gradient(left,  #ffffff 0%,#ffffff 66%,aliceblue 66%,aliceblue 100%);
+        background: -ms-linear-gradient(left,  #ffffff 0%,#ffffff 66%,aliceblue 66%,aliceblue 100%);
+        background: linear-gradient(to right,  #ffffff 0%,#ffffff 66%,aliceblue 66%,aliceblue 100%);
         font-size: 100%;
     }
     header {
@@ -241,6 +295,13 @@ header {
     }
     p {
         font-size: 1em;
+    }
+
+    .main_content {
+        float: left;
+        clear: left;
+        width: 66%;
+        padding: 1em 5% 1em 10%;
     }
 }
 
